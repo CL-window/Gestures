@@ -9,6 +9,7 @@ http://blog.csdn.net/i_do_can/article/details/53185654
     GestureLibraries.fromRawResource(this,R.raw.gestures);// raw文件
 ## 第二步，手势的画板
 GestureOverlayView
+```
     <!--
     GestureOverlayView：一种用于手势输入的透明覆盖层，可覆盖在其他控件的上方，也可包含其他控件。
     android:gestureStrokeType 定义笔画（定义为手势）的类型
@@ -22,9 +23,11 @@ GestureOverlayView
         android:gestureColor="@color/gesture_color"
         android:gestureStrokeWidth="10"
         android:gestureStrokeType="multiple" />
+        ```
 ## 第三步，手势监听
 OnGesturePerformedListener监听器监听一种手势(一笔画完)
 识别手势
+```
     ArrayList predictions = GestureBuilderActivity.getStore().recognize(gesture);
     if (predictions.size() > 0) {
         //拿到相似度最高的对象
@@ -36,7 +39,7 @@ OnGesturePerformedListener监听器监听一种手势(一笔画完)
             Toast.makeText(CreateGestureActivity.this, prediction.name, Toast.LENGTH_SHORT).show();
         }
     }
-
+```
 ## 第四步，保存手势
 GestureLibrary.addGesture(name, Gesture);
 GestureLibrary..save();
