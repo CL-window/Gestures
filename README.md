@@ -23,7 +23,9 @@ GestureOverlayView
         android:gestureColor="@color/gesture_color"
         android:gestureStrokeWidth="10"
         android:gestureStrokeType="multiple" />
-        ```
+
+```
+
 ## 第三步，手势监听
 OnGesturePerformedListener监听器监听一种手势(一笔画完)
 识别手势
@@ -40,6 +42,7 @@ OnGesturePerformedListener监听器监听一种手势(一笔画完)
         }
     }
 ```
+
 ## 第四步，保存手势
 GestureLibrary.addGesture(name, Gesture);
 GestureLibrary..save();
